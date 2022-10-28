@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Lotttozufallsgeneraor
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Lotttozufallsgeneraor</h1>
+  <p>
+    Das ist ein Lotttozufallsgeneraor.
+    <br>
+    Mit * gekennzeichnete Felder sind nötig.
+  </p>
+  <table>
+    <tr>
+      <td>
+        <ion-item>
+          <ion-label position="floating">Anzahl der Reihen max 1000 (*)</ion-label>
+          <ion-input [(ngModel)]="reihen"></ion-input>
+        </ion-item>
+      </td>
+    </tr><br>
+    <tr>
+      <td>
+        <ion-item>
+          <ion-label position="floating">x </ion-label>
+          <ion-input [(ngModel)]="wert1x"></ion-input>
+        </ion-item>
+      </td>
+      <p> aus </p>
+      <td>
+        <ion-item>
+          <ion-label position="floating">y </ion-label>
+          <ion-input [(ngModel)]="wert2y"></ion-input>
+        </ion-item>
+      </td>
+    </tr>
+  </table>
+
+  <ion-button class="button" (click)="openNextTab(1)">Start 6 aus 49</ion-button>
+  <ion-button class="button" (click)="openNextTab(2)">Start 5 aus 50</ion-button>
+  <ion-button class="button" (click)="openNextTab(3)">Start x aus y</ion-button>
+
+</ion-content>
